@@ -24,6 +24,32 @@ public class Humain implements Consommation {
 		return "Humain [nom=" + nom + ", prenom=" + prenom + ", age=" + age + "]";
 	}
 	
+	
+	
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 	@Override
     public void manger() {
         System.out.println(nom +" "+prenom+ " est en train de manger.");
@@ -34,4 +60,7 @@ public class Humain implements Consommation {
         System.out.println(nom +" "+prenom+ " est en train de boire.");
     }
 	
+	public void ami(Humain ami) {
+        System.out.println(nom +" "+ prenom +" est maintenant ami avec " + ami.getNom() +" "+ ami.getPrenom() + ".");
+    }
 }
