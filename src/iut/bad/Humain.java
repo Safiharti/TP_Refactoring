@@ -1,9 +1,9 @@
 package iut.bad;
 
 public class Humain {
-	private String nom;
-	private String prenom;
-	private int age;	
+	protected String nom;
+	protected String prenom;
+	protected int age;	
 		
 	public Humain() {
 		
@@ -20,10 +20,18 @@ public class Humain {
 		System.out.println(toString());
 	}
 
-	@Override
 	public String toString() {
 		return "Humain [nom=" + nom + ", prenom=" + prenom + ", age=" + age + "]";
 	}
 	
+	
+    public void manger() {
+        System.out.println(nom +" "+prenom+ " est en train de manger.");
+    }
+
+    
+    public void boire() {
+        System.out.println(nom +" "+prenom+ " est en train de boire.");
+    }
 	
 }
